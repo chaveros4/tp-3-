@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, valor, pares = 0, impares = 0;
+
+    cout << "¿Cuántos números querés cargar? ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Ingrese un número: ";
+        cin >> valor;
+
+        if (valor % 2 == 0)
+            pares++;
+        else
+            impares++;
+    }
+
+    cout << "Pares: " << pares << endl;
+    cout << "Impares: " << impares << endl;
+
+    return 0;
+}
