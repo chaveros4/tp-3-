@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int aprobados = 0;
+    int reprobados = 0;
+    int nota;
+
+    for (int f = 1; f <= 10; f++) {
+        cout << "Ingrese la nota del alumno " << f << ": ";
+        cin >> nota;
+
+        int estado;
+        if (nota >= 7)
+            estado = 1;  // aprobado
+        else
+            estado = 2;  // reprobado
+
+        switch (estado) {
+            case 1:
+                aprobados++;
+                break;
+            case 2:
+                reprobados++;
+                break;
+            default:
+                cout << "Error en la clasificación" << endl;
+        }
+    }
+
+    cout << "\nCantidad de aprobados: " << aprobados << endl;
+    cout << "Cantidad de reprobados: " << reprobados << endl;
+
+    return 0;
+}
